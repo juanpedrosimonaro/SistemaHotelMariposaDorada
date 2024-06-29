@@ -8,7 +8,7 @@ module.exports = {
         cl2:"##6495ED",
       },
       fontFamily: {
-        permark: ['Playfair Display','serif'],
+        playfair: ['Playfair Display','serif'],
         lato: ['Lato','sans-serif']
       },
     }
