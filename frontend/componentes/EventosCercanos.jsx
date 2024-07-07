@@ -16,26 +16,28 @@ function EventosCercanos() {
   }, []);
   return (
     <table>
-      <tr>
-        <th>
-          Evento
-        </th>
-        <th>
-          Fecha
-        </th>
-      </tr>
+      <thead>
+        <tr>
+          <th>
+            Evento
+          </th>
+          <th>
+            Fecha
+          </th>
+        </tr>
+      </thead>
+      <tbody>
       {eventosCercanos.map(evento=>(
-        <tbody>
-          <tr>
-            <td>
-              {evento.nombreEvento}
-            </td>
-            <td>
-              {evento.fecha.toString()}
-            </td>
-          </tr>
-        </tbody>
+        <tr>
+          <td>
+            {evento.nombreEvento}
+          </td>
+          <td>
+            {evento.fecha.toString()}
+          </td>
+        </tr>
       ))}
+      </tbody>
       {/*<span >{`Fecha:${eventoCercano.fecha} Evento:${eventoCercano.nombreEvento}`}</span>*/}
     </table>
   )

@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
 
 const reservacionSchema = new mongoose.Schema({
-  correo: { type: String, required: true, validate:{validator:(v)=>/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/.test(v), message:"El correo proveído no es válido"} },
-  checkIn: { type: Date, require: true },
-  checkOut: { type: Date, require:true },
-  nombreCliente: { type: String, required: true },
-  apellidoCliente: { type: String },
-  telefono: { type: String, required: true, validate:{validator:(v)=>/^[\+]?[0-9]{0,3}\W?[(]?0?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(v),message:"El telefono proveído no es válido"} },
-  adultos: { type: Number }, 
+  usuarioId: {type:mongoose.Schema.Types.ObjectId,ref:'Usuario', required:true},
+  habitacionId: {type:mongoose.Schema.Types.ObjectId,ref:'Habitacion', required:true},
+  checkIn: { type: Date, required: true },
+  checkOut: { type: Date, required: true },
+  adultos: { type: Number, required: true }, 
   ninos: { type: Number }, 
-  habitaciones: { type: Number }, 
   estado:{type: String, enum:['porConfirmar','confirmado','cancelado','diferido','noPresentado'],default:'porConfirmar'}
 });
 

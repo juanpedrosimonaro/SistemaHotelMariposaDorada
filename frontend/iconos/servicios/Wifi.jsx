@@ -1,11 +1,15 @@
-function Wifi({classN}) {
+import {useState,useEffect} from 'react';
+function Wifi({setNombreServicio,className}) {
+  useEffect(()=>{
+    setNombreServicio && setNombreServicio("Internet Inalámbrico");
+  },[])
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 365.892 365.892"
       xmlSpace="preserve"
-      className={classN}
+      className={className}
     >
       <circle cx="182.945" cy="286.681" r="41.494"></circle>
       <path d="M182.946 176.029c-35.658 0-69.337 17.345-90.09 46.398-5.921 8.288-4.001 19.806 4.286 25.726a18.358 18.358 0 0010.704 3.438c5.754 0 11.423-2.686 15.021-7.724 13.846-19.383 36.305-30.954 60.078-30.954 23.775 0 46.233 11.571 60.077 30.953 5.919 8.286 17.437 10.209 25.726 4.288 8.288-5.92 10.208-17.438 4.288-25.726-20.751-29.055-54.43-46.399-90.09-46.399z"></path>

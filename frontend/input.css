@@ -18,6 +18,16 @@ button[type='submit']{
   border-radius:10px;
 }
 
+button {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+a {
+  color:#B58648;
+}
+
 /*nav::before{
   background-image: url('http://localhost:5173/assets/PanoramicaHotel.png');
   position: abosolute;

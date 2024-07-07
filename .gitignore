@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 TODO.md
+TODO2.md
 recursos
 yarn.lock
 .env
